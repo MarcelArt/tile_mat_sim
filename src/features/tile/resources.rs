@@ -49,3 +49,20 @@ impl MaterialRegistry {
         self.materials.get(&id).unwrap()
     }
 }
+
+#[derive(Resource)]
+pub struct TileGridConfig {
+    pub width: i32,
+    pub height: i32,
+    pub tile_size: f32,
+}
+
+impl Default for TileGridConfig {
+    fn default() -> Self {
+        Self {
+            width: 10,
+            height: 10,
+            tile_size: 32.0,
+        }
+    }
+}
